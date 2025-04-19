@@ -1,55 +1,37 @@
 import React from "react";
 import { AiOutlineLogout } from "react-icons/ai";
-import { useNavigate } from "react-router-dom";
 
 function ProfileDataCom() {
-  const [value, setValue] = React.useState("");
-  const navigate = useNavigate();
-  const PROFILE_PATH = "/assets/avatar_default.jpg";
-
-  const logoutFun = () => {
-    localStorage.removeItem("dbdatalocal");
-    navigate("/login");
-  };
-
-  //useeffect
-  React.useEffect(() => {
-    setValue(JSON.parse(localStorage.getItem("dbdatalocal")));
-  }, []);
-
   return (
     <div className="pt-[4.5rem] text-white p-2 flex flex-col justify-center items-center">
       <div className="flex">
         <img
           className="h-32 w-32 rounded-full object-cover"
-          src={value[1] ? `${value[1]}` : `${PROFILE_PATH}`}
+          src={`/assets/avatar_default.jpg`}
           alt="profile_pic"
         />
       </div>
       <div className="w-full md:w-96">
         <div className="w-full mt-10">
-          <p className="pl-2">User Name</p>
+          <p className="">User Name</p>
           <p className="text-md py-4 pl-3 w-full rounded bg-gray-700">
-            @{value[0]}
+            @guest
           </p>
         </div>
         <div className="w-full mt-8">
-          <p className="pl-2">Email</p>
+          <p className="">Email</p>
           <p className="text-md py-4 pl-3 w-full rounded bg-gray-700">
-            {value[2]}
+            guest@gmail.com
           </p>
         </div>
         <div className="w-full mt-8">
-          <p className="pl-2">PhoneNumber</p>
+          <p className="">PhoneNumber</p>
           <p className="text-md py-4 pl-3 w-full rounded bg-gray-700">
-            {value[3]}
+            9876543210
           </p>
         </div>
         <div
-          className="w-full mt-8"
-          onClick={() => {
-            logoutFun();
-          }}
+          className="w-full mt-8 cursor-pointer"
         >
           <p className="text-xl flex items-center justify-center py-4 pl-3 w-full rounded bg-gray-700 hover:bg-gray-600">
             <AiOutlineLogout />

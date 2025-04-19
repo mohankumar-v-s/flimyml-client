@@ -99,7 +99,7 @@ function MoviesDataCom() {
               key={key}
               className="min-w-[160px] text-gray-400 text-center m-2 cursor-pointer"
             >
-              <Link to={`/dashboard/moviedetails/` + id}>
+              <Link to={`/home/moviedetails/` + id}>
                 <img
                   src={
                     poster_path
@@ -124,7 +124,7 @@ function MoviesDataCom() {
               key={key}
               className="min-w-[160px] text-gray-400 text-center m-2 cursor-pointer"
             >
-              <Link to={`/dashboard/moviedetails/` + id}>
+              <Link to={`/home/moviedetails/` + id}>
                 <img
                   src={
                     poster_path
@@ -150,7 +150,7 @@ function MoviesDataCom() {
               key={key}
               className="min-w-[160px] text-gray-400 text-center m-2 cursor-pointer"
             >
-              <Link to={`/dashboard/moviedetails/` + id}>
+              <Link to={`/home/moviedetails/` + id}>
                 <img
                   src={
                     poster_path
@@ -176,7 +176,7 @@ function MoviesDataCom() {
               key={key}
               className="min-w-[160px] text-gray-400 text-center m-2 cursor-pointer"
             >
-              <Link to={`/dashboard/moviedetails/` + id}>
+              <Link to={`/home/moviedetails/` + id}>
                 <img
                   src={
                     poster_path

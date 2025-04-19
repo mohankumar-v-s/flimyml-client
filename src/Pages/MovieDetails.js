@@ -174,7 +174,7 @@ function MovieDetailsCom() {
                   key={key}
                   className="ml-2.5 mr-1 my-2.5 rounded shadow bg-white min-w-[150px] overflow-hidden"
                 >
-                  {/* <Link to={`/dashboard/moviedetails/` + id}> */}
+                  {/* <Link to={`/home/moviedetails/` + id}> */}
                   <img
                     src={
                       profile_path
