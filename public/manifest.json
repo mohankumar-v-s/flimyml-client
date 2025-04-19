@@ -28,7 +28,7 @@
       "name": "Home",
       "short_name": "Home",
       "description": "Recommend Movies To User",
-      "url": "/dashboard/home",
+      "url": "/home/home",
       "icons": [
         {
           "src": "/icons/home.png",
@@ -40,7 +40,7 @@
       "name": "Profile",
       "short_name": "Profile",
       "description": "See Your Personal Details",
-      "url": "/dashboard/profile",
+      "url": "/home/profile",
       "icons": [
         {
           "src": "/icons/profile.png",

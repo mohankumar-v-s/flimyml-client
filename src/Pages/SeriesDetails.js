@@ -115,7 +115,7 @@ function SeriesDetailsCom() {
                   key={id}
                   className="ml-2.5 mr-1 my-2.5 rounded shadow bg-white min-w-[150px] overflow-hidden"
                 >
-                  {/* <Link to={`/dashboard/moviedetails/` + id}> */}
+                  {/* <Link to={`/home/moviedetails/` + id}> */}
                   <img
                     src={
                       profile_path
@@ -149,7 +149,7 @@ function SeriesDetailsCom() {
               key={id}
               className="min-w-[160px] text-gray-400 text-center m-2"
             >
-              <Link to={`/dashboard/seriesdetails/` + id}>
+              <Link to={`/home/seriesdetails/` + id}>
                 <img
                   src={
                     poster_path

@@ -88,7 +88,7 @@ function TvseriesDataCom() {
               key={key}
               className="min-w-[160px] text-gray-400 text-center m-2 cursor-pointer"
             >
-              <Link to={`/dashboard/seriesdetails/` + id}>
+              <Link to={`/home/seriesdetails/` + id}>
                 <img
                   src={
                     poster_path
@@ -116,7 +116,7 @@ function TvseriesDataCom() {
               key={key}
               className="min-w-[160px] text-gray-400 text-center m-2 cursor-pointer"
             >
-              <Link to={`/dashboard/seriesdetails/` + id}>
+              <Link to={`/home/seriesdetails/` + id}>
                 <img
                   src={
                     poster_path
@@ -144,7 +144,7 @@ function TvseriesDataCom() {
               key={key}
               className="min-w-[160px] text-gray-400 text-center m-2 cursor-pointer"
             >
-              <Link to={`/dashboard/seriesdetails/` + id}>
+              <Link to={`/home/seriesdetails/` + id}>
                 <img
                   src={
                     poster_path

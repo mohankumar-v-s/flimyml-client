@@ -13,12 +13,10 @@ function CardCom() {
   // const API_URL = "https://api.themoviedb.org/3/movie/";
 
   //useState
-  const [value, setValue] = React.useState("");
   const [movie, setMovie] = React.useState([]);
   const [similarMovie, setSimilarMovie] = React.useState([]);
   const [popularMovie, setPopularMovie] = React.useState([]);
   const [upcomingMovie, setupcommingMovie] = React.useState([]);
-  const [userMovie, setUserMovie] = React.useState([]);
 
   // const [clicked, setClicked] = React.useState(false);
   const getPopularMovie = async () => {
@@ -34,8 +32,6 @@ function CardCom() {
     console.log(data);
     setPopularMovie(data?.results);
   };
-
-  const genere = value[4];
 
   const getMovie = async () => {
     const { data } = await axios.get(
@@ -65,22 +61,6 @@ function CardCom() {
     console.log(status);
   };
 
-  const getUserMovie = async () => {
-    const { data } = await axios.get(
-      "https://api.themoviedb.org/3/discover/movie",
-      {
-        params: {
-          api_key: API_ENV,
-          with_genres: genere,
-          language: "en-US",
-        },
-      }
-    );
-
-    console.log(data);
-    setUserMovie(data?.results);
-  };
-
   const getUpcomingMovie = async () => {
     const { data } = await axios.get(
       "https://api.themoviedb.org/3/movie/upcoming",
@@ -101,10 +81,9 @@ function CardCom() {
     similarGetMovie();
     getPopularMovie();
     getUpcomingMovie();
-    getUserMovie();
-    setValue(JSON.parse(localStorage.getItem("dbdatalocal")));
+    // getUserMovie();
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [genere]);
+  }, []);
 
   return (
     <div className="pt-16 pl-2 pb-12 text-white">
@@ -183,32 +162,6 @@ function CardCom() {
         )}
       </div>
 
-      <p className="text-2xl">Your Fav Movies</p>
-      <div className="flex w-[96vw] overflow-x-scroll no-scrollbar">
-        {userMovie.map(
-          ({ id, poster_path, original_title, release_date }, key) => (
-            <div
-              key={id}
-              className="min-w-[160px] text-gray-400 text-center m-2"
-            >
-              <Link to={`/home/moviedetails/` + id}>
-                <img
-                  src={
-                    poster_path
-                      ? `${IMAGE_PATH}${poster_path}`
-                      : `${NO_IMAGE_URL}`
-                  }
-                  alt={id}
-                  className="rounded w-full h-[250px] object-cover min-h-[250px] bg-white"
-                />
-                <p className="line-clamp-2">{original_title}</p>
-                {/* <span>{release_date}</span> */}
-              </Link>
-            </div>
-          )
-        )}
-      </div>
-
       <p className="text-2xl">Upcomming Movies</p>
       <div className="flex w-[96vw] overflow-x-scroll no-scrollbar">
         {upcomingMovie.map(
@@ -217,7 +170,7 @@ function CardCom() {
               key={key}
               className="min-w-[160px] text-gray-400 text-center m-2 cursor-pointer"
             >
-              <Link to={`/dashboard/moviedetails/` + id}>
+              <Link to={`/home/moviedetails/` + id}>
                 <img
                   src={
                     poster_path
