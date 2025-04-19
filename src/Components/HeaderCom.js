@@ -1,7 +1,7 @@
 import React from "react";
 import { FaSearch } from "react-icons/fa";
 import { IoNotifications } from "react-icons/io5";
-import PoppupComProfile from "./PoppupComProfile";
+// import PoppupComProfile from "./PoppupComProfile";
 
 function HeaderCom() {
   return (
@@ -26,7 +26,7 @@ function HeaderCom() {
           </div>
           <div className="flex space-x-2 items-center">
             <IoNotifications className="h-6 w-6 hidden md:inline-block" />
-            <PoppupComProfile />
+            {/* <PoppupComProfile /> */}
           </div>
         </div>
       </nav>
